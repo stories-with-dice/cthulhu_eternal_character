@@ -1,0 +1,56 @@
+// Future Age skill list (Part 2 - Skills). Differences from Modern Day:
+// Firearms -> Firearms/Beam Weapons, Regional Lore -> Planet/Station Lore,
+// Anthropology/Natural World dropped, Ride dropped, and several new skills
+// (Artificial Intelligence, Cosmology, Hacking, Xenoarcheology, Zero-G
+// Maneuvering) are added.
+export const SKILLS_FUTURE = [
+  { name: "Administration", base: 10, specialty: false, description: "Understanding how bureaucracies work (forms, databases, biometrics). Interpreting information in hand, not tracking it down (that's Research)." },
+  { name: "Alertness", base: 20, specialty: false, description: "Detects danger: hear a weapon readied, catch mumbling through a wall, spot a concealed item, or catch someone using Stealth." },
+  { name: "Appraise", base: 10, specialty: false, description: "Quickly determine an item's true value; useful for favorable bartering." },
+  { name: "Art", base: 0, specialty: true, description: "Creating or performing emotionally-swaying work; also authenticating a creator's work.", specialtyExamples: ["Acting", "Dance", "Forgery", "Holography", "Music", "Poetry", "Sculpture", "Singing", "Storytelling", "Videography"] },
+  { name: "Artificial Intelligence", base: 0, specialty: false, description: "Deeper knowledge behind 'smart' systems: build AI-powered devices, detect AI-generated media, manipulate or confound an AI, bypass its guardrails." },
+  { name: "Athletics", base: 30, specialty: false, description: "Trained physical feats: outrun someone, jump a gap, climb in a crisis, safe falls, hit a thrown target, catch something unexpectedly." },
+  { name: "Charm", base: 20, specialty: false, description: "Changing someone's viewpoint via guile, cunning, or flattery -- not threats (Harangue) or logic (Persuade)." },
+  { name: "Cosmology", base: 10, specialty: false, description: "Understanding of the forces/ecology/laws shaping a planet or celestial body: orbits, atmosphere, weather, native life, and (if relevant) terraforming." },
+  { name: "Craft", base: 0, specialty: true, description: "Specialized construction/repair requiring real training.", specialtyExamples: ["Blacksmith", "Carpenter", "FoodTech", "Jury-Rigging", "SecurityTech", "RoboTech"] },
+  { name: "Disguise", base: 10, specialty: false, description: "Alter appearance, voice, posture, biometrics, and mannerisms to avoid recognition without drawing attention." },
+  { name: "Dodge", base: 30, specialty: false, description: "Evading attacks via instinct/reflexes; against firearms/explosives, only useful to reach cover." },
+  { name: "Drive", base: 20, specialty: false, description: "Handling ground vehicles or surface-skimmer anti-grav safely in a crisis." },
+  { name: "Firearms / Beam Weapons", base: 20, specialty: false, description: "Safe, accurate shooting with common firearms (projectile or laser/plasma beam) in combat." },
+  { name: "First Aid", base: 10, specialty: false, description: "Initial treatment/stabilization of injuries to recover Hit Points." },
+  { name: "Foreign Language", base: 0, specialty: true, description: "Fluency in another (human, alien, or synthetic) language; 20% = halting conversation, 50% = native fluency.", specialtyExamples: [] },
+  { name: "Forensics", base: 0, specialty: false, description: "Gathering detailed evidence from human remains: cause of a fire, a bullet or beam's trajectory, a blood pool's severity." },
+  { name: "Hacking", base: 0, specialty: false, description: "Defeating electronic security protecting doors, data, and communications; creating or using anti-security software." },
+  { name: "Harangue", base: 10, specialty: false, description: "Browbeating someone into agreement via bluster, shouting, and threats." },
+  { name: "Heavy Machinery", base: 10, specialty: false, description: "Safe operation of a tractor, crane, mecha, steam train, or other big machine in a crisis." },
+  { name: "History", base: 10, specialty: false, description: "Uncovering facts and theories about the antiquity of humanity and other known intelligent species." },
+  { name: "Insight", base: 10, specialty: false, description: "Obtaining information about a person, especially what they'd rather conceal, via observation and conversation." },
+  { name: "Law", base: 0, specialty: true, description: "Understanding/manipulating a society's power structures. Usable at half chance for an unfamiliar legal system.", specialtyExamples: [] },
+  { name: "Medicine", base: 0, specialty: false, description: "Diagnosis and long-term treatment of injury/illness." },
+  { name: "Melee Weapons", base: 30, specialty: false, description: "Lethal use of melee weapons in combat: knife, crowbar, stun baton, power sabre." },
+  { name: "Military Training", base: 0, specialty: true, description: "First-hand military training/experience: tactics, unit knowledge, power armor, heavy weapons.", specialtyExamples: ["Heavy Weapons", "Demolitions"] },
+  { name: "Navigate", base: 10, specialty: false, description: "Finding your way with maps, charts, compass, or dead reckoning; may split into planet-bound vs. deep-space astrogation." },
+  { name: "Occult", base: 10, specialty: false, description: "Study of the supernatural per human tradition; cannot distinguish genuinely unnatural from mere superstition (that's Unnatural)." },
+  { name: "Persuade", base: 20, specialty: false, description: "Changing someone's deeply held decision via reason; also resists persuasion/interrogation." },
+  { name: "Pharmacy", base: 0, specialty: false, description: "Knowledge of drugs, herbal remedies, nanomedicines, and medical devices." },
+  { name: "Pilot", base: 0, specialty: true, description: "Piloting waterborne, airborne, or spaceborne vehicles safely through a crisis.", specialtyExamples: ["Airplane", "Drone", "Drop Ship", "Fighter", "Starship"] },
+  { name: "Planet / Station Lore", base: 0, specialty: true, description: "Deep understanding unique to one planet, asteroid, or space station.", specialtyExamples: [] },
+  { name: "Psychoanalyze", base: 10, specialty: false, description: "Diagnosis/treatment of mental illness. Can't be used on yourself." },
+  { name: "Research", base: 10, specialty: false, description: "Finding specific information in a large repository: file systems, records, obsolete databases." },
+  { name: "Science", base: 0, specialty: true, description: "Deep study of how the universe works, beyond common schooling.", specialtyExamples: ["Astronomy", "Botany", "Chemistry", "Engineering", "Genetics", "Geology", "Mathematics", "Meteorology", "Physics", "Quantum Mechanics", "Xenobiology", "Zoology"] },
+  { name: "Search", base: 20, specialty: false, description: "Finding things concealed or obscured from plain sight." },
+  { name: "Stealth", base: 10, specialty: false, description: "Concealing presence/activity: hide a weapon, pickpocket, move silently, blend into a crowd." },
+  { name: "Surgery", base: 0, specialty: false, description: "Invasive treatment of injury/abnormality." },
+  { name: "Survival", base: 10, specialty: true, description: "Knowledge of challenging natural or artificial environments: expeditions, toxic air, orbital hazards.", specialtyExamples: ["Desert", "Jungle", "Orbital", "Tundra", "Urban", "Zero-G"] },
+  { name: "Swim", base: 20, specialty: false, description: "Swimming in dangerous crises: rough water, saving a drowning friend." },
+  { name: "Technology Use", base: 0, specialty: false, description: "Umbrella skill for using highly-specialized devices and their limited intelligent control systems." },
+  { name: "Track", base: 10, specialty: false, description: "Locate and follow the tracks of a specific creature or person." },
+  { name: "Unarmed Combat", base: 20, specialty: false, description: "Self-defense / fighting bare-handed." },
+  { name: "Unnatural", base: 0, specialty: false, description: "Knowledge of the mind-shattering true secrets of the cosmos; reduces Max SAN as it rises; cannot be improved by the normal fail-and-check mechanic." },
+  { name: "Xenoarcheology", base: 0, specialty: false, description: "Study of the physical remains of intelligent-species cultures; analyze a ruin's ancient purpose or destruction." },
+  { name: "Zero-G Maneuvering", base: 0, specialty: false, description: "Moving gracefully in low/zero gravity, avoiding becoming an uncoordinated tangle of flailing limbs." },
+];
+
+export function findFutureSkill(name) {
+  return SKILLS_FUTURE.find((s) => s.name === name);
+}

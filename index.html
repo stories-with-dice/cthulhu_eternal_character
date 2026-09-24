@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cthulhu Eternal Character Generator</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header class="app-header">
+  <h1>Cthulhu Eternal &mdash; Character Generator</h1>
+  <p class="subtitle">Unofficial character generator for the Cthulhu Eternal OGL RPG (Modern, Future, and Medieval Age settings).</p>
+</header>
+
+<div class="app-layout">
+  <aside class="sidebar">
+    <div class="panel">
+      <h2>Saved Protagonists</h2>
+      <p id="storage-warning" class="storage-warning" hidden>
+        ⚠ Browser storage isn't available in this context, so saved characters will only last until you close or reload this page. Use <strong>Export JSON</strong> on a character to keep a permanent copy.
+      </p>
+      <button id="btn-new-character" class="btn btn-secondary btn-block">+ New Protagonist</button>
+      <ul id="saved-character-list" class="saved-list"></ul>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <section class="panel" id="settings-panel">
+      <h2>
+        Setting
+        <button id="toggle-settings" class="btn-link" type="button">hide</button>
+      </h2>
+      <div id="settings-body" class="settings-grid">
+
+        <div class="setting-group">
+          <label for="opt-era">Era</label>
+          <select id="opt-era">
+            <option value="modern">Modern Age</option>
+            <option value="future">Future Age</option>
+            <option value="medieval">Medieval Age</option>
+          </select>
+        </div>
+
+        <div class="setting-group">
+          <label for="opt-harshness">Harshness of Upbringing</label>
+          <select id="opt-harshness">
+            <option value="Normal(ish)">Normal(ish)</option>
+            <option value="Harsh">Harsh</option>
+            <option value="Very Harsh">Very Harsh</option>
+          </select>
+        </div>
+
+        <div class="setting-group">
+          <label for="opt-archetype">Archetype</label>
+          <select id="opt-archetype">
+            <option value="">Random</option>
+          </select>
+        </div>
+
+        <div class="setting-group">
+          <label for="opt-name">Name</label>
+          <input type="text" id="opt-name" placeholder="(optional)" />
+        </div>
+
+        <div class="setting-group">
+          <label for="opt-sex">Sex</label>
+          <input type="text" id="opt-sex" placeholder="(optional)" />
+        </div>
+
+        <div class="setting-group">
+          <label for="opt-age">Age</label>
+          <input type="number" id="opt-age" min="1" max="120" placeholder="(optional)" />
+        </div>
+
+      </div>
+    </section>
+
+    <section class="panel generate-panel">
+      <div class="generate-choices">
+        <button id="btn-generate" class="btn btn-primary btn-large">🎲 Quick Random Generate</button>
+        <button id="btn-start-wizard" class="btn btn-large">🛠 Build Step-by-Step</button>
+      </div>
+      <p class="hint">Quick Random rolls and resolves everything at once. Build Step-by-Step walks through Statistics, Archetype &amp; Skills, Resources &amp; Bonds, Adversity/Bonus Skill Points, Mental Damage, and Final Details one at a time, with a "Randomize this step" shortcut on each.</p>
+    </section>
+
+    <section class="panel" id="wizard-panel" hidden>
+      <div class="wizard-header">
+        <div id="wizard-progress" class="wizard-progress"></div>
+        <button id="btn-wizard-cancel" class="btn-link" type="button">cancel</button>
+      </div>
+      <h2 id="wizard-step-title"></h2>
+      <div id="wizard-step-body" class="wizard-step-body"></div>
+      <p id="wizard-error" class="wizard-error" hidden></p>
+      <div class="wizard-nav">
+        <button id="btn-wizard-back" class="btn">&larr; Back</button>
+        <button id="btn-wizard-randomize" class="btn btn-secondary">🎲 Randomize this step</button>
+        <span class="spacer"></span>
+        <button id="btn-wizard-next" class="btn btn-primary">Next &rarr;</button>
+      </div>
+    </section>
+
+    <section class="panel" id="sheet-panel" hidden>
+      <div class="sheet-toolbar">
+        <button id="btn-regenerate" class="btn btn-small" title="Regenerate this character from the current settings">🎲 Regenerate</button>
+        <span class="spacer"></span>
+        <button id="btn-save" class="btn btn-small btn-secondary">💾 Save</button>
+        <button id="btn-export-json" class="btn btn-small">Export JSON</button>
+        <button id="btn-export-md" class="btn btn-small">Export Markdown</button>
+        <button id="btn-export-pdf" class="btn btn-small">Export PDF</button>
+      </div>
+      <div id="character-sheet"></div>
+    </section>
+  </main>
+</div>
+
+<footer class="app-footer">
+  <p>Unofficial fan tool. Cthulhu Eternal is published under the OGL by its creators; rules content adapted from the Cthulhu Eternal SRD for personal use.</p>
+</footer>
+
+<script src="js/lib/jspdf.umd.min.js"></script>
+<script src="js/dist/bundle.js"></script>
+</body>
+</html>
